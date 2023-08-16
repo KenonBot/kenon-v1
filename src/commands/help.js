@@ -23,9 +23,7 @@ module.exports = {
 
     const commands = await client.application.commands.fetch();
 
-    const type =
-      languageMappings[guildDb?.language] ||
-      "en"
+    const type = "en"
 
         .setColor("#35393e")
         .setTitle("<:kquestion:1134998601639149608> 〢 Help")
