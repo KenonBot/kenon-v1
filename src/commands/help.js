@@ -12,7 +12,7 @@ module.exports = {
     .setDmPermission(false),
 
   async execute(interaction, client) {
-    const pingembed = new EmbedBuilder()
+    const pingembed = new EmbedBuilder();
 
     const languageMappings = {
       de_DE: "de",
@@ -21,13 +21,29 @@ module.exports = {
       fr_FR: "fr",
     };
 
-      const commands = await client.application.commands.fetch()
+    const commands = await client.application.commands.fetch();
 
-      const type = languageMappings[guildDb?.language] || "en"
+    const type =
+      languageMappings[guildDb?.language] ||
+      "en"
 
-      .setColor("#35393e")
-      .setTitle("<:kquestion:1134998601639149608> 〢 Help")
-      .setDescription(`\n${commands.sort((a, b) => a.name.localeCompare(b.name)).map(n => `</${n.name}:${n.id}> - ${type === "de" ? n.descriptionLocalizations.de : type === "es" ? n.descriptionLocalizations["es-ES"] : n.description}`).join("\n")}`);
+        .setColor("#35393e")
+        .setTitle("<:kquestion:1134998601639149608> 〢 Help")
+        .setDescription(
+          `\n${commands
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .map(
+              (n) =>
+                `</${n.name}:${n.id}> - ${
+                  type === "de"
+                    ? n.descriptionLocalizations.de
+                    : type === "es"
+                    ? n.descriptionLocalizations["es-ES"]
+                    : n.description
+                }`,
+            )
+            .join("\n")}`,
+        );
 
     const button = new ActionRowBuilder().addComponents(
       new ButtonBuilder()
