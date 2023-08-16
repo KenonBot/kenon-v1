@@ -34,7 +34,7 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName("work")
     .setDescription("Work and earn credits based on your job.")
-    .setDmPermission(false),
+    .setDMPermission(false),
   async execute(interaction) {
     const userId = interaction.user.id;
 

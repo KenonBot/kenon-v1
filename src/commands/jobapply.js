@@ -41,7 +41,7 @@ module.exports = {
         )
         .setRequired(true),
     )
-    .setDmPermission(false),
+    .setDMPermission(false),
   async execute(interaction) {
     const userId = interaction.user.id;
     const jobTitle = interaction.options.getString("job");

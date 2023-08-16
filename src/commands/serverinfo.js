@@ -5,7 +5,7 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName("serverinfo")
     .setDescription("Get information about the server")
-    .setDmPermission(false),
+    .setDMPermission(false),
 
   async execute(interaction) {
     const guildIdParam = interaction.options.getString("server");

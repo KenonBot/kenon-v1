@@ -38,7 +38,7 @@ module.exports = {
         .setDescription("The code to redeem")
         .setRequired(true),
     )
-    .setDmPermission(false),
+    .setDMPermission(false),
 
   async execute(interaction, client) {
     const codeToRedeem = interaction.options.getString("code");

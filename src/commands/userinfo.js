@@ -10,7 +10,7 @@ module.exports = {
         .setName("user")
         .setDescription("The user to get information about"),
     )
-    .setDmPermission(false),
+    .setDMPermission(false),
 
   async execute(interaction) {
     const userOption =

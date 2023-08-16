@@ -9,7 +9,7 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName("beg")
     .setDescription("Beg for some credits!")
-    .setDmPermission(false),
+    .setDMPermission(false),
 
   async execute(interaction) {
     const userId = interaction.user.id;

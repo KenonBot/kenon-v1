@@ -9,7 +9,7 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName("changelog")
     .setDescription("Displays the Latest Changelog of the Bot.")
-    .setDmPermission(false),
+    .setDMPermission(false),
 
   async execute(interaction, client) {
     const pingembed = new EmbedBuilder()

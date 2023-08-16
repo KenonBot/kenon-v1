@@ -10,7 +10,7 @@ module.exports = {
         .setDescription("The emoji to send as an image or gif")
         .setRequired(true),
     )
-    .setDmPermission(false),
+    .setDMPermission(false),
 
   async execute(interaction) {
     const { options } = interaction;

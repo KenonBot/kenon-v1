@@ -23,7 +23,7 @@ module.exports = {
           { name: "Trains", value: "trains" },
         ),
     )
-    .setDmPermission(false),
+    .setDMPermission(false),
 
   async execute(interaction) {
     const categoryData = {

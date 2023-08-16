@@ -9,7 +9,7 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName("vote")
     .setDescription("Vote for the Bot and Support us!")
-    .setDmPermission(false),
+    .setDMPermission(false),
 
   async execute(interaction, client) {
     const pingembed = new EmbedBuilder()

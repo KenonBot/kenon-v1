@@ -6,7 +6,7 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName("leaderboard")
     .setDescription("Display the top 10 users based on credits")
-    .setDmPermission(false),
+    .setDMPermission(false),
 
   async execute(interaction) {
     const leaderboardEmbed = new EmbedBuilder()

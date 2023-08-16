@@ -9,7 +9,7 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName("team")
     .setDescription("Shows you the Team of Kenon.")
-    .setDmPermission(false),
+    .setDMPermission(false),
 
   async execute(interaction, client) {
     const pingembed = new EmbedBuilder()

@@ -29,7 +29,7 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName("jobleave")
     .setDescription("Leave your current job.")
-    .setDmPermission(false),
+    .setDMPermission(false),
   async execute(interaction) {
     const userId = interaction.user.id;
 

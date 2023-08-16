@@ -9,7 +9,7 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName("help")
     .setDescription("Sends you a Help Page")
-    .setDmPermission(false),
+    .setDMPermission(false),
 
   async execute(interaction, client) {
     const pingembed = new EmbedBuilder()

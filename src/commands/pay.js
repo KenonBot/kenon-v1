@@ -51,7 +51,7 @@ module.exports = {
         .setDescription("The amount of credits to pay.")
         .setRequired(true),
     )
-    .setDmPermission(false),
+    .setDMPermission(false),
   async execute(interaction) {
     const senderId = interaction.user.id;
     const recipient = interaction.options.getUser("recipient");

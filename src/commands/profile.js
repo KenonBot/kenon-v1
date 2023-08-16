@@ -32,7 +32,7 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName("profile")
     .setDescription("Check your profile.")
-    .setDmPermission(false),
+    .setDMPermission(false),
   async execute(interaction) {
     const userId = interaction.user.id;
 
