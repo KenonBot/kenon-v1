@@ -1,14 +1,15 @@
-const { SlashCommandBuilder } = require('@discordjs/builders');
-const { EmbedBuilder } = require('discord.js');
-const User = require('../models/User');
+const { SlashCommandBuilder } = require("@discordjs/builders");
+const { EmbedBuilder } = require("discord.js");
+const User = require("../models/User");
 
 // Map to store the cooldowns of each user
 const cooldowns = new Map();
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName('beg')
-    .setDescription('Beg for some credits!'),
+    .setName("beg")
+    .setDescription("Beg for some credits!")
+    .setDmPermission(false),
 
   async execute(interaction) {
     const userId = interaction.user.id;
@@ -18,9 +19,11 @@ module.exports = {
       const remainingCooldown = getRemainingCooldown(userId);
 
       const cooldownEmbed = new EmbedBuilder()
-        .setColor('#2f3136')
-        .setTitle('<:ktime:1135000938021658826> 〢 Cooldown')
-        .setDescription(`> You are on cooldown! Please wait **${remainingCooldown}** before begging again.`);
+        .setColor("#2f3136")
+        .setTitle("<:ktime:1135000938021658826> 〢 Cooldown")
+        .setDescription(
+          `> You are on cooldown! Please wait **${remainingCooldown}** before begging again.`,
+        );
 
       await interaction.reply({ embeds: [cooldownEmbed], ephemeral: true });
       return;
@@ -41,9 +44,11 @@ module.exports = {
     await user.save();
 
     const earningsEmbed = new EmbedBuilder()
-      .setColor('#2f3136')
-      .setTitle('<:klift:1135001245086658580> 〢 Beg')
-      .setDescription(`> You begged and received <:kenon_coin:1117946111034937424>\`${creditsEarned}\` credit(s)!`);
+      .setColor("#2f3136")
+      .setTitle("<:klift:1135001245086658580> 〢 Beg")
+      .setDescription(
+        `> You begged and received <:kenon_coin:1117946111034937424>\`${creditsEarned}\` credit(s)!`,
+      );
 
     await interaction.reply({ embeds: [earningsEmbed] });
 

@@ -1,6 +1,11 @@
-const { SlashCommandBuilder, EmbedBuilder, MessageActionRow, MessageSelectMenu } = require('discord.js');
-const mongoose = require('mongoose');
-const path = require('path');
+const {
+  SlashCommandBuilder,
+  EmbedBuilder,
+  MessageActionRow,
+  MessageSelectMenu,
+} = require("discord.js");
+const mongoose = require("mongoose");
+const path = require("path");
 
 // Assuming you already have the User model defined from the previous code
 
@@ -11,17 +16,20 @@ const jobApplicationSchema = new mongoose.Schema({
 });
 
 // Check if the model already exists before creating it
-const JobApplication = mongoose.models.JobApplication || mongoose.model('JobApplication', jobApplicationSchema);
+const JobApplication =
+  mongoose.models.JobApplication ||
+  mongoose.model("JobApplication", jobApplicationSchema);
 
 // ...
 
 // Valid job titles
-const validJobs = ['Warehouse Clerk', 'Waiter', 'Full Stack Developer'];
+const validJobs = ["Warehouse Clerk", "Waiter", "Full Stack Developer"];
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName('jobleave')
-    .setDescription('Leave your current job.'),
+    .setName("jobleave")
+    .setDescription("Leave your current job.")
+    .setDmPermission(false),
   async execute(interaction) {
     const userId = interaction.user.id;
 
@@ -31,9 +39,9 @@ module.exports = {
 
       if (!existingApplication) {
         const noJob = new EmbedBuilder()
-          .setColor('#2f3136')
-          .setTitle('><:klist:1134998610044538890> 〢 Error')
-          .setDescription('> You do not have any active job.');
+          .setColor("#2f3136")
+          .setTitle("><:klist:1134998610044538890> 〢 Error")
+          .setDescription("> You do not have any active job.");
 
         interaction.reply({ embeds: [noJob] });
         return;
@@ -43,14 +51,16 @@ module.exports = {
       await existingApplication.deleteOne();
 
       const jobLeft = new EmbedBuilder()
-        .setColor('#2f3136')
-        .setTitle('<:kcheck:1135000999212355647> 〢 Successful!')
-        .setDescription('> You have left your job.');
+        .setColor("#2f3136")
+        .setTitle("<:kcheck:1135000999212355647> 〢 Successful!")
+        .setDescription("> You have left your job.");
 
       interaction.reply({ embeds: [jobLeft] });
     } catch (error) {
-      console.error('Error leaving job:', error);
-      interaction.reply('> An error occurred while leaving your job. This has been logged.');
+      console.error("Error leaving job:", error);
+      interaction.reply(
+        "> An error occurred while leaving your job. This has been logged.",
+      );
     }
   },
 };

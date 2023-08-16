@@ -10,11 +10,10 @@ require("dotenv").config();
 
 const EventHandler = require("./eventLoader");
 
-module.exports = class BoilerplateClient extends Client {
+module.exports = class Kenon extends Client {
   constructor(customCacheOptions = {}) {
     super({
       intents: [
-
         GatewayIntentBits.GuildMessages,
         GatewayIntentBits.MessageContent,
         GatewayIntentBits.Guilds,
@@ -28,10 +27,24 @@ module.exports = class BoilerplateClient extends Client {
         ThreadManager: 0,
         ThreadMemberManager: 0,
         CategoryChannelChildManager: 0,
-        MessageManager: 0,
-        ReactionManager: 0,
+        MessageManager: 20000,
+        ReactionUserManager: {
+            maxSize: 1000000,
+            sweepFilter: () => userFilter,
+            sweepInterval: 5 * 60 * 1000,
+        },
+        UserManager: {
+            maxSize: 1000000,
+            sweepFilter: () => userFilter,
+            sweepInterval: 5 * 60 * 1000,
+        },
+        GuildMemberManager: {
+            maxSize: 1000000,
+            sweepFilter: () => userFilter,
+            sweepInterval: 5 * 60 * 1000,
+        },
         ...customCacheOptions,
-      }),
+    }),
     });
 
     this.commands = new Collection();

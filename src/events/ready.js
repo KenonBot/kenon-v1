@@ -6,7 +6,7 @@ const { ChalkAdvanced } = require("chalk-advanced");
 
 module.exports = async (client) => {
   const commandFiles = readdirSync("./src/commands/").filter((file) =>
-    file.endsWith(".js")
+    file.endsWith(".js"),
   );
 
   const commands = [];
@@ -27,35 +27,46 @@ module.exports = async (client) => {
         await rest.put(Routes.applicationCommands(client.user.id), {
           body: commands,
         });
-        console.log(`${ChalkAdvanced.white("KΞNON")} ${ChalkAdvanced.gray(">")} ${ChalkAdvanced.green(`Successfully registered commands globally. I'm in ${client.guilds.cache.size} Guilds.`)}`);
-
+        console.log(
+          `${ChalkAdvanced.white("KΞNON")} ${ChalkAdvanced.gray(
+            ">",
+          )} ${ChalkAdvanced.green(
+            `Successfully registered commands globally. I'm in ${client.guilds.cache.size} Guilds.`,
+          )}`,
+        );
       } else {
         await rest.put(
           Routes.applicationGuildCommands(client.user.id, process.env.GUILD_ID),
           {
             body: commands,
-          }
+          },
         );
 
-        console.log(`${ChalkAdvanced.white("KΞNON")} ${ChalkAdvanced.gray(">")} ${ChalkAdvanced.green("Successfully registered commands locally")}`);
+        console.log(
+          `${ChalkAdvanced.white("KΞNON")} ${ChalkAdvanced.gray(
+            ">",
+          )} ${ChalkAdvanced.green(
+            "Successfully registered commands locally",
+          )}`,
+        );
       }
     } catch (err) {
       if (err) console.error(err);
     }
   })();
-   const updatePresence = (client) => {
-  const serverCount = client.guilds.cache.size;
-  client.user.setPresence({
-    activities: [{ name: `with the Pictures` }],
-    status: `${process.env.DISCORDSTATUS}`,
-  });
-};
+  const updatePresence = (client) => {
+    const serverCount = client.guilds.cache.size;
+    client.user.setPresence({
+      activities: [{ name: `with the Pictures` }],
+      status: `${process.env.DISCORDSTATUS}`,
+    });
+  };
 
-// Call updatePresence immediately
-updatePresence(client);
-
-// Update the presence every 5 minutes (300000 milliseconds)
-const interval = setInterval(() => {
+  // Call updatePresence immediately
   updatePresence(client);
-}, 300000);
+
+  // Update the presence every 5 minutes (300000 milliseconds)
+  const interval = setInterval(() => {
+    updatePresence(client);
+  }, 300000);
 };
