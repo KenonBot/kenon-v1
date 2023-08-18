@@ -24,24 +24,24 @@ module.exports = {
     });
 
     const type = "en";
-const pingembed = new EmbedBuilder()
-        .setColor("#35393e")
-        .setTitle("<:kquestion:1134998601639149608> 〢 Help")
-        .setDescription(
-          `\n${commands
-            .sort((a, b) => a.name.localeCompare(b.name))
-            .map(
-              (n) =>
-                `</${n.name}:${n.id}> - ${
-                  type === "de"
-                    ? n.descriptionLocalizations.de
-                    : type === "es"
-                    ? n.descriptionLocalizations["es-ES"]
-                    : n.description
-                }`,
-            )
-            .join("\n")}`,
-        );
+    const pingembed = new EmbedBuilder()
+      .setColor("#35393e")
+      .setTitle("<:kquestion:1134998601639149608> 〢 Help")
+      .setDescription(
+        `\n${commands
+          .sort((a, b) => a.name.localeCompare(b.name))
+          .map(
+            (n) =>
+              `</${n.name}:${n.id}> - ${
+                type === "de"
+                  ? n.descriptionLocalizations.de
+                  : type === "es"
+                  ? n.descriptionLocalizations["es-ES"]
+                  : n.description
+              }`,
+          )
+          .join("\n")}`,
+      );
 
     const button = new ActionRowBuilder().addComponents(
       new ButtonBuilder()
