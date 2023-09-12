@@ -47,7 +47,7 @@ module.exports = {
       .setColor("#2f3136")
       .setTitle("<:klift:1135001245086658580> 〢 Beg")
       .setDescription(
-        `> You begged and received <:kenon_coin:1117946111034937424>\`${creditsEarned}\` credit(s)!`,
+        `> You begged and received <:kcoin:1135002536777093170>\`${creditsEarned}\` credit(s)!`,
       );
 
     await interaction.reply({ embeds: [earningsEmbed] });

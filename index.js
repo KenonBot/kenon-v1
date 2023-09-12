@@ -1,7 +1,7 @@
-const Kenon = require("./src/util/client");
+const BoilerplateClient = require("./src/util/client");
 const ChalkAdvanced = require("chalk-advanced");
 
-const client = new Kenon();
+const client = new BoilerplateClient();
 
 client.loginBot().then(() => {
   console.log(

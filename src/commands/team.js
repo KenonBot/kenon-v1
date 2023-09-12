@@ -22,12 +22,12 @@ module.exports = {
       .addFields(
         {
           name: "<:kcrown:1135001140648493148> | Developers (1)",
-          value: `> cgxdev`,
+          value: `> cgxdev, dominikdev`,
           inline: false,
         },
         {
           name: "<:kshield:1134998614075244656> | Staff (3)",
-          value: `> doom4846, watersaltice, pxule`,
+          value: `> doom4846, watersaltice`,
           inline: false,
         },
       );

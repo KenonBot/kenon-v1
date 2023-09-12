@@ -120,7 +120,7 @@ module.exports = {
       const filter = (m) => !m.author.bot; // Ignore messages from bots
       const collector = interaction.channel.createMessageCollector({
         filter,
-        time: 14000,
+        time: 15000,
       });
 
       collector.on("collect", async (m) => {

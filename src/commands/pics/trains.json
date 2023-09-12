@@ -1,19 +1,4 @@
 [
-	{    "pictureLink": "https://infoportal.mobil.nrw/fileadmin/_processed_/0/0/csm__iStock-957429536_Teka77_43922b9838.jpg",
-         "answer": "Class 423"  
-	},
-    {    "pictureLink": "https://upload.wikimedia.org/wikipedia/commons/b/bb/101_043-8_in_N%C3%BCrnberg.jpg",
-         "answer": "Class 101"  
-	},
-{    "pictureLink": "https://i.pinimg.com/736x/5a/9a/b5/5a9ab5a559a715ff18fc62a806ae8c15.jpg",
-         "answer": "Class 102"  
-	},
-{    "pictureLink": "https://upload.wikimedia.org/wikipedia/commons/6/6d/51133180752_1a510547ce_o_%28444042_at_SOA%29_%28XAM-E1%29.jpg",
-         "answer": "Class 444"  
-	},
-{    "pictureLink": "https://i.pinimg.com/736x/a8/5e/42/a85e42a0cdf5812486b3be0070a3e8f3.jpg",
-         "answer": "Class 43"  
-	},
 {    "pictureLink": "https://assets.new.siemens.com/siemens/assets/api/uuid:5ce1433b-7877-460f-bba3-dbbfa1073927/width:1024/im2017070751mo_300dpi.jpg",
          "answer": "Desiro HC"  
 	},
@@ -50,15 +35,19 @@
 {    "pictureLink": "https://www.erfurt.de/mam/ef/service/aktuelles/2022/fittosize_85_700_350_18d36e50b2588e374cbea8c90af6869b_tramlink.jpg",
          "answer": "Tramlink"  
 	},
-{    "pictureLink": "https://images.hattons.co.uk/subcategories/3143335.jpg?v=030223-011848",
-         "answer": "Class 406"  
-	},
 {    "pictureLink": "https://upload.wikimedia.org/wikipedia/commons/8/89/105Na_105NaD_Pozna%C5%84.JPG",
          "answer": "Konstal 105Na"  
 	},
 {    "pictureLink": "https://spotlog.org/photoHi/PO/POTR/ModerusBetaMF20AC.jpg",
          "answer": "Moderus Beta"  
 	},
+    { "pictureLink": "https://www.ergon3.de/wp-content/uploads/2021/04/GT8N-Exterior-scaled.jpg",
+         "answer": "ADtranz GT8N"  
+	},
+    {    "pictureLink": "https://upload.wikimedia.org/wikipedia/commons/e/eb/HBLR_Jersey_City_July_2013.jpg",
+         "answer": "Kinki Sharyo 2000"  
+	},
+ 
 {    "pictureLink": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Moderus_Alfa_HF_09_in_Szczecin.jpg",
          "answer": "Moderus Alfa"  
 	}

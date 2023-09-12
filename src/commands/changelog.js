@@ -16,17 +16,12 @@ module.exports = {
 
       .setColor("#2f3136")
       .setTitle("<:kpc:1134998607909621860> 〢 Changelog")
-      .setDescription("Version: 2.0.4")
+      .setDescription("Version: 2.0.5")
       .addFields(
         {
-          name: "New Guess the Picture Category!",
+          name: "New Commands!",
           value:
-            ">>> Attention, Railway Fans!\nWe've added the Category \"Trains\". This isn't big at the moment, but we are going to add more questions soon!",
-        },
-        {
-          name: "Introducing... Job System!",
-          value:
-            ">>> It's now possible to earn credits by working! Select your Job and you are able to work every 90 Minutes.",
+            ">>> Do you want a new Profile Picture related to Anime? Try `/animeavatar`! OR `/randomwebsite` if you are really bored...",
         },
       );
 

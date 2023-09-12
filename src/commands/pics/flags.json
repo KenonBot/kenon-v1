@@ -69,7 +69,7 @@
          "answer": "Malaysia"  
 	},
     {    "pictureLink": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/1200px-Flag_of_Vietnam.svg.png",
-         "answer": "Viatnam"  
+         "answer": "Vietnam"  
 	},
     {    "pictureLink": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Flag_of_the_Democratic_Republic_of_the_Congo.svg/2560px-Flag_of_the_Democratic_Republic_of_the_Congo.svg.png",
          "answer": "Democratic Republic of the Congo"  
@@ -81,7 +81,7 @@
          "answer": "Turkmenistan"  
 	},
     {    "pictureLink": "https://www.nationalflaggen.de/media/292/flagge-kuba.png",
-         "answer": "Kuba"  
+         "answer": "Cuba"  
 	},
     {    "pictureLink": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_North_Rhine-Westphalia_%28state%29.svg/2560px-Flag_of_North_Rhine-Westphalia_%28state%29.svg.png",
          "answer": "North Rhine-Westphalia"  
@@ -112,5 +112,11 @@
 	},
     {    "pictureLink": "https://th.bing.com/th/id/R.d369a520bdad9db4e42e65ca78c8d932?rik=pp7tOBOl6rjaYA&pid=ImgRaw&r=0",
          "answer": "Sweden"  
-	}
+	},
+    
+
+    {
+        "pictureLink": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Flag_of_the_Federated_States_of_Micronesia.svg/2560px-Flag_of_the_Federated_States_of_Micronesia.svg.png",
+        "answer": "Micronesia"
+    }
 ]
