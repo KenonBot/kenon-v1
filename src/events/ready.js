@@ -3,11 +3,10 @@ const { Routes } = require("discord-api-types/v9");
 const { readdirSync } = require("fs");
 require("dotenv").config();
 const { ChalkAdvanced } = require("chalk-advanced");
-const { AutoPoster } = require('topgg-autoposter')
-
+const { AutoPoster } = require("topgg-autoposter");
 
 module.exports = async (client) => {
-  const poster = AutoPoster(process.env.TOPGG, client)
+  const poster = AutoPoster(process.env.TOPGG, client);
   const commandFiles = readdirSync("./src/commands/").filter((file) =>
     file.endsWith(".js"),
   );
@@ -38,9 +37,10 @@ module.exports = async (client) => {
           )}`,
         );
         // optional
-        poster.on('posted', (stats) => { // ran when succesfully posted
-          console.log(`Posted stats to Top.gg | ${stats.serverCount} servers`)
-        })
+        poster.on("posted", (stats) => {
+          // ran when succesfully posted
+          console.log(`Posted stats to Top.gg | ${stats.serverCount} servers`);
+        });
       } else {
         await rest.put(
           Routes.applicationGuildCommands(client.user.id, process.env.GUILD_ID),

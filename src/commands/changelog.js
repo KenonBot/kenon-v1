@@ -17,13 +17,11 @@ module.exports = {
       .setColor("#2f3136")
       .setTitle("<:kpc:1134998607909621860> 〢 Changelog")
       .setDescription("Version: 2.0.5")
-      .addFields(
-        {
-          name: "New Commands!",
-          value:
-            ">>> Do you want a new Profile Picture related to Anime? Try `/animeavatar`! OR `/randomwebsite` if you are really bored...",
-        },
-      );
+      .addFields({
+        name: "New Commands!",
+        value:
+          ">>> Do you want a new Profile Picture related to Anime? Try `/animeavatar`! OR `/randomwebsite` if you are really bored...",
+      });
 
     const button = new ActionRowBuilder().addComponents(
       new ButtonBuilder()

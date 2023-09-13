@@ -36,7 +36,7 @@ module.exports = {
       "https://puginarug.com",
       "https://sliding.toys",
       "https://longdogechallenge.com",
-	  "https://alwaysjudgeabookbyitscover.com",
+      "https://alwaysjudgeabookbyitscover.com",
       "https://optical.toys",
       "https://mackprodukt.de",
       "https://cursoreffects.com",
@@ -51,40 +51,43 @@ module.exports = {
       "https://clicking.toys",
       "https://weirdorconfusing.com",
       "https://checkbox.toys/",
-        "https://floatingqrcode.com/",
-        "https://optical.toys/",
-        "http://eelslap.com/",
-        "https://binarypiano.com/",
-        "https://jacksonpollock.org/",
-        "http://burymewithmymoney.com/",
-        "http://endless.horse/",
-        "https://trypap.com/",
-        "https://maze.toys/",
-        "http://drawing.garden/",
-        "https://www.movenowthinklater.com/",
-        "http://www.republiquedesmangues.fr/",
-        "http://www.staggeringbeauty.com/",
-        "http://www.rrrgggbbb.com/",
-        "https://checkboxrace.com/",
-        "https://rotatingsandwiches.com/",
-        "http://randomcolour.com/",
+      "https://floatingqrcode.com/",
+      "https://optical.toys/",
+      "http://eelslap.com/",
+      "https://binarypiano.com/",
+      "https://jacksonpollock.org/",
+      "http://burymewithmymoney.com/",
+      "http://endless.horse/",
+      "https://trypap.com/",
+      "https://maze.toys/",
+      "http://drawing.garden/",
+      "https://www.movenowthinklater.com/",
+      "http://www.republiquedesmangues.fr/",
+      "http://www.staggeringbeauty.com/",
+      "http://www.rrrgggbbb.com/",
+      "https://checkboxrace.com/",
+      "https://rotatingsandwiches.com/",
+      "http://randomcolour.com/",
     ];
 
-    const randomWebsiteURL = websites[Math.floor(Math.random() * websites.length)];
-      
+    const randomWebsiteURL =
+      websites[Math.floor(Math.random() * websites.length)];
+
     // Get the current count of websites
     const websiteCount = websites.length;
-      
+
     const websiteEmbed = new EmbedBuilder()
       .setColor("#35393e")
       .setTitle("<:klink:1134998612053602397> 〢 Random Website")
-      .setDescription(`>>> Click the button below to visit a random website.\nThere are currently **${websiteCount}** Websites in my Database.`);
+      .setDescription(
+        `>>> Click the button below to visit a random website.\nThere are currently **${websiteCount}** Websites in my Database.`,
+      );
 
     const button = new ActionRowBuilder().addComponents(
       new ButtonBuilder()
         .setLabel("Visit Random Website")
         .setStyle(5)
-        .setEmoji('<:klink:1134998612053602397>') // This is for a link button style
+        .setEmoji("<:klink:1134998612053602397>") // This is for a link button style
         .setURL(randomWebsiteURL), // Set the URL to the random website
     );
 
