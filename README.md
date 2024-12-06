@@ -12,7 +12,7 @@ How to install:
 - run pnpm install
 - create a .env
 - paste and fill out:
-  ```bash
+```bash
 TOKEN= <Your bots token ofc>
 GUILD_ID= <The guild id to load slash commands on>
 STATUS=DEVELOPMENT <Change to PRODUCTION to load commands on every guild>
