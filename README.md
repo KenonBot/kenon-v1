@@ -22,3 +22,4 @@ DISCORDSTATUS=dnd <Change to whatever you want>
 - run `node .`
 
 You'll need a MongoDB in order to run this bot. Paste it into every file that needs the connection.
+You also may need to re-fill the .jsons with the pictures, but that shouldn't be that hard.
