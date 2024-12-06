@@ -20,4 +20,5 @@ STATUSBOT= <The status for your bot>
 DISCORDSTATUS=dnd <Change to whatever you want>
 ```
 - run `node .`
+
 You'll need a MongoDB in order to run this bot. Paste it into every file that needs the connection.
