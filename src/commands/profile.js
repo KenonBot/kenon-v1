@@ -2,7 +2,7 @@ const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
 const mongoose = require("mongoose");
 
 const uri =
-  "mongodb+srv://admin:SixrYaxUeu8KwDhA@cluster0.rayv48e.mongodb.net/?retryWrites=true&w=majority";
+  "REPLACE_WITH_YOUR_URI";
 
 // Define the user schema
 const userSchema = new mongoose.Schema({
